@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Apr 29, 2013 12:45:59 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.demo.modelo.Perfil" table="perfil" catalog="demo">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="descripcion" type="string">
+            <column name="descripcion" length="45" not-null="true" />
+        </property>
+        <property name="mant" type="boolean">
+            <column name="mant" not-null="true" />
+        </property>
+        <property name="mantClie" type="boolean">
+            <column name="mant_clie" not-null="true" />
+        </property>
+        <property name="mantProv" type="boolean">
+            <column name="mant_prov" not-null="true" />
+        </property>
+        <property name="reporte" type="boolean">
+            <column name="reporte" not-null="true" />
+        </property>
+        <property name="repClie" type="boolean">
+            <column name="rep_clie" not-null="true" />
+        </property>
+        <property name="repProv" type="boolean">
+            <column name="rep_prov" not-null="true" />
+        </property>
+        <property name="conf" type="boolean">
+            <column name="conf" not-null="true" />
+        </property>
+        <property name="confPerf" type="boolean">
+            <column name="conf_perf" not-null="true" />
+        </property>
+        <property name="confUsuarios" type="boolean">
+            <column name="conf_usuarios" not-null="true" />
+        </property>
+        <set name="usuarios" inverse="true">
+            <key>
+                <column name="perfil_id" not-null="true" />
+            </key>
+            <one-to-many class="com.demo.modelo.Usuario" />
+        </set>
+    </class>
+</hibernate-mapping>

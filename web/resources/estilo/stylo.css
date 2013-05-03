@@ -1,0 +1,26 @@
+/* 
+    Document   : stylo
+    Created on : Apr 29, 2013, 9:52:53 AM
+    Author     : carlos
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { 
+   
+ 
+    
+}
+
+#centro{
+    position:absolute;
+    top:60%;
+    left:50%;
+    margin-top: -2000px;
+    margin-left: -320px;
+    
+        
+}
+
+
+
