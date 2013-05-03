@@ -1,6 +1,5 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * carlos diaz
  */
 package com.demo.dao;
 
