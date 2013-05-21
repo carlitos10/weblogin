@@ -2,11 +2,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://java.sun.com/jsf/core">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
-        <title>Login con permisos</title>
-        <style type="text/css">
+        <title>Facelet Title</title>
+          <style type="text/css">
 	html{ 
 		height:100%;
 
@@ -21,11 +20,9 @@
  </style>
     </h:head>
     <h:body>
-      <h:form>  
+        <h:form id="menubar">  
   
-    <p:growl id="messages"/>  
-  
-    <h3>MENU</h3>  
+   
     <p:menubar autoDisplay="false">  
         <p:menuitem VALUE   ="Inicio" icon="ui-icon-document"/>  
         <p:submenu  rendered="#{loginBean.usuario.perfil.mant}" label="Mantenimiento" icon="ui-icon-contact">  
@@ -41,7 +38,7 @@
             </p:submenu>  
   
         <p:submenu rendered="#{loginBean.usuario.perfil.conf}" label="Configuracion" icon="ui-icon-contact">  
-            <p:menuitem rendered="#{loginBean.usuario.perfil.confPerf}" value="perfiles" url="perfil.jsf" />  
+            <p:menuitem rendered="#{loginBean.usuario.perfil.confPerf}" value="perfiles" url="#" />  
             <p:menuitem rendered="#{loginBean.usuario.perfil.confUsuarios}" value="usarios" url="#" />  
             </p:submenu>  
   
@@ -54,6 +51,10 @@
     
   
 </h:form>  
+        <h:form id="frmNuevo"> 
+            
+            
+        </h:form>
     </h:body>
 </html>
 
